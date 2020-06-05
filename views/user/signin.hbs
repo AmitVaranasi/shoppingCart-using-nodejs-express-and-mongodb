@@ -1,0 +1,33 @@
+<div class="w3-row" style="padding-bottom: 300px;">
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    <div class="w3-col w3-container w3-card-4 w3-light-grey" style="width: 50%;">
+        <div class="w3-container w3-indigo">
+            <h1>Sign In</h1>
+        </div>
+        {{#if hasErrors}}
+
+        <div class="w3-panel w3-pale-red w3-text-red">
+            {{#each messages}}
+                <p>{{this}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+        
+        <form  action="/user/signin" method="POST" style="min-height: max-content;">
+            <div style="margin-top: 5px;">
+                <label for="email">Email</label>
+                <input class="w3-input w3-border w3-round" type="text" name="email" id = "email">
+            </div>
+            <div style="margin-top: 5px;">
+                <label for="password">password</label>
+                <input class="w3-input w3-border w3-round" type="password" name="password" id = "password">   
+            </div>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+            <button class="w3-button w3-indigo w3-round-large" type="submit" style="margin-top: 5px;margin-bottom:7px">Sign Up</button>
+        </form>
+        <p>Don't have an account already <a href="/user/signup">Sign up instead</a></p>
+       
+    </div>
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    
+</div>

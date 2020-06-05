@@ -1,0 +1,48 @@
+{{# if products}}
+    <div class="w3-row" style="padding-bottom: 300px;">
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    <div class="w3-col w3-container w3-card-4 w3-light-grey" style="width: 50%;">
+        <ul class="w3-ul w3-border" style="width: 100%;margin-top:5px;">
+            {{# each products}}
+            <li>
+            <strong>{{this.item.title}}</strong>
+            <span class="w3-round-xxlarge w3-green w3" style="padding: 3px;">₹{{this.price}}</span>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">Action</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="/reduce/{{this.item._id}}" class="w3-bar-item w3-button">Reduce by 1</a>
+                <a href="/remove/{{this.item._id}}" class="w3-bar-item w3-button">Remove All</a>
+      
+                </div>
+            </div>
+            <span class="w3-badge w3-right" style="margin-top: 5px;">{{this.qty}}</span>
+            </li>
+            {{/ each}}
+        </ul>
+        <hr>
+        <strong style="padding-top: 10px;">Total:{{totalPrice}}</strong>
+        <hr>
+
+        <a href = "/checkout" type ="button" class="w3-button w3-round-large w3-green w3" style="margin-bottom: 5px;">Check Out</a>
+
+    </div>
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    
+</div>
+{{ else }}
+    <div class="w3-row" style="padding-bottom: 300px;">
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    <div class="w3-col w3-container w3-card-4 w3-light-grey" style="width: 50%;">
+       <h2>No Items in the cart</h2>
+    </div>
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    
+</div>
+{{/ if}}
+
+
+
+
+
+
+

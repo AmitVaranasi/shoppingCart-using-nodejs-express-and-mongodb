@@ -1,0 +1,21 @@
+.w3-card-4{
+    margin-left: 40px;
+    
+}
+.w3-container{
+    margin-top: 10px;
+    margin-bottom: 5px;
+   
+}
+.w3-center img{
+    max-height: 150px;
+    max-width: 150px;
+}
+.mainbody{
+    height:100%;
+    background-image: linear-gradient(to top left, darkblue, skyblue);
+}
+.container{
+
+    padding-bottom: 127px;
+}

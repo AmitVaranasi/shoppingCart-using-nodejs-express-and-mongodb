@@ -1,0 +1,29 @@
+<div class="w3-row" style="padding-bottom: 300px;">
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    <div class="w3-col w3-container w3-card-4 w3-light-grey" style="width: 50%;">
+        <h1>User Profile</h1>
+        
+        <h2>My Orders</h2>
+        
+        {{# each orders }}
+            
+                <div class="w3-panel ">
+                    <ul class="w3-ul w3-border">
+                        {{# each this.items }}
+                            <li >
+                                <strong>{{this.item.title}}</strong> |
+                                <span class="w3-round-xxlarge w3-green w3" style="padding: 3px;">₹{{this.price}}</span>
+                                <span class="w3-badge w3-right">  {{ this.qty }} Unit/s</span>
+                            </li>
+                             
+                        {{/each}}
+                    </ul>
+                   
+                </div>
+                
+            
+        {{/each}}
+    </div>
+    <div class="w3-col w3-container" style="width: 25%;"></div>
+    
+</div>

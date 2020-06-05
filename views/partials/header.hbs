@@ -1,0 +1,23 @@
+<div class="w3-bar w3-border w3-black">
+  <a href="/" class="w3-bar-item w3-button w3-mobile  w3-padding-large"><i class="fas fa-home"></i> Home</a>
+  
+  
+  <div class="w3-dropdown-hover w3-mobile w3-right ">
+    <button class="w3-button w3-padding-large"><i class="fa fa-user" aria-hidden="true"></i> User <i class="fa fa-caret-down"></i></button>
+    <ul class="w3-dropdown-content w3-bar-block w3-dark-grey">
+      {{# if login}}
+      <li><a href="/user/profile" class="w3-bar-item w3-button w3-mobile">User Profile</a></li>      
+      <li><li><a href="/user/logout" class="w3-bar-item w3-button w3-mobile">Logout</a></li></li>
+      {{else}}
+      <li><a href="/user/signup" class="w3-bar-item w3-button w3-mobile">Sign up</a></li>
+      <li><a href="/user/signin" class="w3-bar-item w3-button w3-mobile">Sign in</a></li>
+      {{/ if}}
+      
+      
+      
+    </ul>
+  </div>
+  <a href="/shopping-cart/" class="w3-bar-item w3-button w3-mobile w3-right w3-padding-large">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart <span class="w3-badge">{{session.cart.totalQty}}</span>
+    </a>
+</div>
